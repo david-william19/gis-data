@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "rsrq": -9,
+    "operator": "Telkomsel",
+    "lat": -6.200000,
+    "lng": 106.816666
+  },
+  {
+    "id": 2,
+    "rsrq": -12,
+    "operator": "Indosat",
+    "lat": -6.914744,
+    "lng": 107.609810
+  },
+  {
+    "id": 3,
+    "rsrq": -7,
+    "operator": "XL Axiata",
+    "lat": -7.250445,
+    "lng": 112.768845
+  },
+  {
+    "id": 4,
+    "rsrq": -10,
+    "operator": "Telkomsel",
+    "lat": -6.914744,
+    "lng": 107.609810
+  },
+  {
+    "id": 5,
+    "rsrq": -14,
+    "operator": "Indosat",
+    "lat": -6.208763,
+    "lng": 106.845599
+  },
+  {
+    "id": 6,
+    "rsrq": -8,
+    "operator": "XL Axiata",
+    "lat": -6.917464,
+    "lng": 107.619125
+  },
+  {
+    "id": 7,
+    "rsrq": -11,
+    "operator": "Smartfren",
+    "lat": -6.595038,
+    "lng": 106.816635
+  },
+  {
+    "id": 8,
+    "rsrq": -13,
+    "operator": "Telkomsel",
+    "lat": -6.121435,
+    "lng": 106.774124
+  },
+  {
+    "id": 9,
+    "rsrq": -6,
+    "operator": "Indosat",
+    "lat": -7.797068,
+    "lng": 110.370529
+  },
+  {
+    "id": 10,
+    "rsrq": -9,
+    "operator": "XL Axiata",
+    "lat": -6.966667,
+    "lng": 110.416664
+  }
+]
