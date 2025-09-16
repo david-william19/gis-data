@@ -1,0 +1,21 @@
+.select-input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.select-label {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}

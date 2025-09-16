@@ -5,7 +5,7 @@ export default function useDevices() {
   const [data, setData] = useState<Device[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [selected, setSelected] = useState('all');
+  const [selected, setSelected] = useState("all");
   let currentId = 11;
 
   const getDevicesInfo = async () => {
@@ -22,28 +22,33 @@ export default function useDevices() {
     setData(data);
   };
 
-  const selectedFilter = useCallback((event: React.ChangeEvent<HTMLSelectElement>) => {
-    console.log(event.target.value)
-    setSelected(event.target.value)
-  }, [])
+  const selectedFilter = useCallback(
+    (event: React.ChangeEvent<HTMLSelectElement>) => {
+      console.log(event.target.value);
+      setSelected(event.target.value);
+    },
+    []
+  );
 
   const dataDevice = useMemo(() => {
-    if(selected !== 'all') {
-        return data.filter((res) => res.operator.toLowerCase() === selected)
+    if (selected !== "all") {
+      return data.filter((res) => res.operator.toLowerCase() === selected);
     }
 
     return data;
-  }, [data, selected])
+  }, [data, selected]);
 
   useEffect(() => {
     getDevicesInfo();
 
     const addNewestOperator = setInterval(() => {
-      const rsrq = Number((Math.random() * (-3 - -20) + -20).toFixed(1));
+      const rsrq = Number((Math.random() * (-3 - -30) + -20).toFixed(1));
       const latMin = -11.0;
       const latMax = 6.0;
       const lngMin = 95.0;
       const lngMax = 141.0;
+      const OPERATOR = ["Telkomsel", "XL Axiata", "Smartfren", "Indosat"];
+      const operator = OPERATOR[Math.floor(Number(Math.random() * 4))];
 
       const latitude = Number(
         (latMin + Math.random() * (latMax - latMin)).toFixed(6)
@@ -56,7 +61,7 @@ export default function useDevices() {
         ...prev,
         {
           id: currentId++,
-          operator: "telkomsel",
+          operator: operator,
           rsrq: rsrq,
           lat: latitude,
           lng: longitude,
@@ -71,6 +76,6 @@ export default function useDevices() {
     dataDevice,
     loading,
     error,
-    selectedFilter
+    selectedFilter,
   };
 }
